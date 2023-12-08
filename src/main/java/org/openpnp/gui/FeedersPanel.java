@@ -338,13 +338,15 @@ public class FeedersPanel extends JPanel implements WizardContainer {
             }
         }
         if (feederConfigurationIsDirty && (priorFeeder != null)) {
-            int selection = JOptionPane.showConfirmDialog(null,
-                    priorFeeder.getName() + " changed.  Apply changes?",
-                    "Warning!",
-                    JOptionPane.YES_NO_CANCEL_OPTION,
-                    JOptionPane.QUESTION_MESSAGE,
-                    null
-                    );
+            // int selection = JOptionPane.showConfirmDialog(null,
+            //         priorFeeder.getName() + " changed.  Apply changes?",
+            //         "Warning!",
+            //         JOptionPane.YES_NO_CANCEL_OPTION,
+            //         JOptionPane.QUESTION_MESSAGE,
+            //         null
+            //         );
+            // Force appy data 
+            int selection = JOptionPane.YES_OPTION;
             switch (selection) {
                 case JOptionPane.YES_OPTION:
                     for (Component component : configurationPanel.getComponents()) {
